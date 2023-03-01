@@ -6,6 +6,7 @@ import Form from './pages/Form'
 import NotFound from './pages/NotFound'
 import Submitted from './pages/Submitted'
 import Profile from './pages/Profile'
+import BlogPosts from './pages/BlogPosts'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Link to='/about'>About</Link>
           <Link to='/profile'>Profile</Link>
           <Link to='/form'>Form</Link>
+          <Link to='/blogs'>Blogs</Link>
         </nav>
         
         <Routes>
@@ -26,10 +28,11 @@ function App() {
           <Route path='/submitted' element={<Submitted />} />
           <Route path='/profile' element={<Profile />} />
           <Route path='/profile/:username' element={<Profile />} />
+          <Route path='/blogs' element={<BlogPosts />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
 
-        <footer>
+        <footer style={{color: 'gray', backgroundColor: '#111111', borderRadius: '5px'}}>
           foooter
         </footer>
       </Router>
