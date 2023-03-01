@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react'
+import Blog from '../components/Blog';
 
 const BlogPosts = () => {
   const [blogs, setBlogs] = useState([
@@ -10,14 +11,7 @@ const BlogPosts = () => {
   return (
     <Fragment>
       <h1>Blog Posts Archive</h1>
-      <div>
-        {blogs.map((blog) => (
-          <div key={blog.id}>
-            <h3>{blog.title}</h3>
-            <p>{blog.body}</p>
-          </div>
-        ))}
-      </div>
+      <Blog blogs={blogs} />
     </Fragment>
   )
 }
