@@ -1,0 +1,7 @@
+{
+  "blogs": [
+    {"title": "anjay", "body": "buuuu", "id": 1},
+    {"title": "anjay2", "body": "buuuus", "id": 2},
+    {"title": "anjay3", "body": "buuuud", "id": 3}
+  ]
+}
