@@ -14,10 +14,10 @@ function App() {
       <Router>
         <h3>React Router Test</h3>
         <nav>
-          <Link to='/'>Home</Link>
-          <Link to='/about'>About</Link>
-          <Link to='/profile'>Profile</Link>
-          <Link to='/form'>Form</Link>
+          <Link to='/' style={{marginRight: "20px"}}>Home</Link>
+          <Link to='/about' style={{marginRight: "20px"}}>About</Link>
+          <Link to='/profile' style={{marginRight: "20px"}}>Profile</Link>
+          <Link to='/form' style={{marginRight: "20px"}}>Form</Link>
           <Link to='/blogs'>Blogs</Link>
         </nav>
         
