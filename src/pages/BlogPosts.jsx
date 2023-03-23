@@ -1,37 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Blog from '../components/Blog';
+import useFetch from '../components/useFetch';
 
 function BlogPosts() {
-  const [blogs, setBlogs] = useState(null);
   const [name, setName] = useState('pais');
-  const [isPending, setIsPending] = useState(true);
-  const [error, setError] = useState(null);
+  const { data: blogs, isPending, error } = useFetch('http://localhost:8000/blogs');
 
   // const handleHide = (id) => {
   //   const newBlogs = blogs.filter(blog => blog.id !== id)
   //   setBlogs(newBlogs)
   // }
-
-  // fungsi yg dijalanin tiap kali render
-  useEffect(() => {
-    console.log('use effect coy');
-    fetch('http://localhost:8000/blogs')
-      .then((res) => {
-        if (!res.ok) {
-          throw Error('gak bisa ambil data cuy');
-        }
-        return res.json();
-      })
-      .then((data) => {
-        setBlogs(data);
-        setIsPending(false);
-        setError(null);
-      })
-      .catch((err) => {
-        setIsPending(false);
-        setError(err.message);
-      });
-  }, []); // array dependency buat nentuin kapan fungsi dijalanin (saat suatu state berubah)
 
   return (
     <>
